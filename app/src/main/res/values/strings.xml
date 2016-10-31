@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GamesApp</string>
+    <string name="delete_btn">Delete</string>
+    <string name="add_btn">Add</string>
+    <string name="game_name">Name</string>
+    <string name="game_desc">Description</string>
+    <string name="game_price">0</string>
+
+</resources>
