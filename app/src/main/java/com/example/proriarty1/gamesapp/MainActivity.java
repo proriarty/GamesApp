@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         dialog_add=new Dialog_add();
         findViewById(R.id.add_btn).setOnClickListener(this);
         games= new ArrayList<>();
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SimpleAdapter listAdapter = new SimpleAdapter(this, games,R.layout.item,keys,ids);
         ListView listOfItems = (ListView) findViewById(R.id.listOfItems);
         listOfItems.setAdapter(listAdapter);
+        games.add(new Game("Uno","Desc2",6,300,6 ));
+
 
 
 
