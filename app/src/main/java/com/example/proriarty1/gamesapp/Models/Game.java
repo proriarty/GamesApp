@@ -8,28 +8,43 @@ import java.util.HashMap;
 
 public class Game extends HashMap<String,String>{ // data класс настолок
     // все переменные private, так что чтобы получить к ним доступ из других классов, пользуйся методами
-  /*  private String description;
+  /*
+    private String description;
     private String title;
     private Integer players;
     private int price;
-    private byte age;*/
+    private byte age;
+    */
 
     public Game (String title, String description, Integer players, Integer price, Integer age){ //допиши конструктор
         super();
-        super.put("title",title);
+        super.put("name",title);
         super.put("desc",description);
         super.put("players", players.toString());
         super.put("price", price.toString());
         super.put("age",age.toString());
 
     }
-  /*  public String getTitle(){
-        return super.get("title");
+
+   public String getName(){
+        return super.get("name");
+    }
+    public String getDesc(){
+        return super.get("desc");
+    }
+    public String getPrice(){
+        return super.get("price");
+    }
+    public Integer getPlayers(){
+        return Integer.valueOf(super.get("players"));
+    }
+    public Integer getAge(){
+        return Integer.valueOf(super.get("age"));
     }
   /*  public Game() {
 
     }
-/*
+
     public String getTitle(){
 return  title;
     }

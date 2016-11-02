@@ -10,61 +10,68 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText"
-        android:text="@string/game_name" />
+        android:id="@+id/dialog_name"
+        android:layout_margin="2dp"
+        android:hint="Name" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:text="@string/game_desc" />
+        android:id="@+id/dialog_desc"
+        android:minLines="3"
+        android:layout_margin="2dp"
+        android:hint="Description" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vozrast"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
 
-        <RadioGroup
+        <RadioButton
+
+            android:button="@drawable/age_6"
+            android:layout_weight="1"
+            android:alpha="0.5"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/est"
-            android:baselineAligned="false">
-
-            <RadioButton
-                android:button="@drawable/age_12"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton4"
+            android:textAlignment="viewStart" />
 
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton4" />
+        <RadioButton
 
+            android:button="@drawable/age_12"
+            android:alpha="0.5"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1" />
 
-            <RadioButton
-                android:button="@drawable/age_12"
-                android:alpha="0"
-                android:text=""
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton3"
-                android:layout_weight="1" />
-
-            <RadioButton
-                android:button="@drawable/age_18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton2" />
-        </RadioGroup>
-    </LinearLayout>
+        <RadioButton
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:button="@drawable/age_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2" />
+    </RadioGroup>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:text="@string/game_price" />
+        android:id="@+id/dialog_price"
+        android:layout_margin="2dp"
+        android:hint="Price" />
 
     <SeekBar
         style="@style/Widget.AppCompat.SeekBar.Discrete"
@@ -72,12 +79,43 @@
         android:layout_height="wrap_content"
         android:max="19"
         android:progress="0"
-        android:id="@+id/seekBar2" />
+        android:id="@+id/seekBar2"
+        android:layout_margin="2dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarStart"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarCurrent"
+            android:layout_weight="1"
+            android:text=" "
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarFinish"
+            android:layout_weight="1"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
 
     <Button
-        android:text="Button"
+        android:text="@string/save_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/save_btn"
+        android:layout_margin="2dp" />
 
 </LinearLayout>
