@@ -6,28 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.proriarty1.gamesapp.Models.Game;
-import com.example.proriarty1.gamesapp.MainActivity;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.BitmapFactory;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 
 //import static com.example.proriarty1.gamesapp.MainActivity.addGame;
 import static com.example.proriarty1.gamesapp.MainActivity.games;
@@ -69,11 +55,6 @@ public class Dialog_add extends DialogFragment implements SeekBar.OnSeekBarChang
         players.setOnSeekBarChangeListener(this);
         vozrast = (RadioGroup) v.findViewById(R.id.vozrast);
 
-        //объявляем переменные для проверки заполненности полей
-        final TextView nameCheck = (TextView) v.findViewById(R.id.name);
-        TextView descCheck = (TextView) v.findViewById(R.id.desc);
-        TextView priceCheck = (TextView) v.findViewById(R.id.price);
-
         r1 = (RadioButton) v.findViewById(R.id.radioButton2);
         r2 = (RadioButton) v.findViewById(R.id.radioButton3);
         r3 = (RadioButton) v.findViewById(R.id.radioButton4);
@@ -112,18 +93,12 @@ public class Dialog_add extends DialogFragment implements SeekBar.OnSeekBarChang
                         getDialog().dismiss();
                         listAdapter.notifyDataSetChanged();//dismiss закрывает диалог
 
-                        EditText a = (EditText)
-                        if ((nameCheck.getText().length() == 0) || (descCheck.getText().length() == 0) || (priceCheck.getText().length() == 0)) {
-                            Toast toast = Toast.makeText(getApplicationContext(),
-                                    "иди на хуй", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
+
                 }
             }
 
 
-        }
-                ;
+        };
 
         r1.setOnClickListener(onClickSave);
         r2.setOnClickListener(onClickSave);
