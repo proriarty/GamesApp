@@ -21,7 +21,7 @@ import static com.example.proriarty1.gamesapp.MainActivity.listAdapter;
 
 /**
  */
-//Created by Proriarty1 on 30.10.2016.
+/**Created by Proriarty1 on 30.10.2016.**/
 public class DialogF extends DialogFragment implements SeekBar.OnSeekBarChangeListener {
 
     TextView name;
@@ -34,10 +34,10 @@ public class DialogF extends DialogFragment implements SeekBar.OnSeekBarChangeLi
     RadioButton r2;
     RadioButton r3;
     Game currentGame;
-    boolean AddOrEdit = false;
+    boolean AddOrEdit = false; //false for Add true for Edit
     View view;
-    // Notification notification;
-    Integer age;//0 for add, 1 for edit
+
+    Integer age;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -212,12 +212,9 @@ public class DialogF extends DialogFragment implements SeekBar.OnSeekBarChangeLi
         }
         r.setChecked(true);
         r.setAlpha(1);
-
-
     }
 
     void cleanAll() {
-
         this.players.setProgress(0);
         this.name.setText("");
         this.desc.setText("");

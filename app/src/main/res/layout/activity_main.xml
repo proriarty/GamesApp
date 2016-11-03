@@ -36,13 +36,13 @@
             android:layout_weight="1" />
 
         <ToggleButton
-            android:text="Delete"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/del_btn"
             android:layout_weight="1"
-            android:textOff="Delete"
-            android:textOn="Done" />
+            android:textOff="@string/delete_btn"
+            android:textOn="@string/done_btn" />
 
     </LinearLayout>
 

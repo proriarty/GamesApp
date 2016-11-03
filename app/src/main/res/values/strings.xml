@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">GamesApp</string>
     <string name="delete_btn">Delete</string>
+    <string name="done_btn">Done</string>
     <string name="add_btn">Add</string>
     <string name="game_name">Name</string>
     <string name="game_desc">Description</string>
     <string name="game_price">0</string>
     <string name="save_btn">Save</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_price">Price</string>
+    <string name="hint_desc">Description</string>
+    <string name="minPlayers">1</string>
+    <string name="maxPlayers">20</string>
 
 </resources>
