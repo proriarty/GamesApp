@@ -1,12 +1,14 @@
 package com.example.proriarty1.gamesapp.Models;
 
+import com.example.proriarty1.gamesapp.R;
+
 import java.util.HashMap;
 
 /**
  * Created by Proriarty1 on 29.10.2016.
  */
 
-public class Game extends HashMap<String,String>{ // data класс настолок
+public class Game extends HashMap<String, String> { // data класс настолок
     // все переменные private, так что чтобы получить к ним доступ из других классов, пользуйся методами
   /*
     private String description;
@@ -15,31 +17,55 @@ public class Game extends HashMap<String,String>{ // data класс насто�
     private int price;
     private byte age;
     */
+    private int age;
 
-    public Game (String title, String description, Integer players, Integer price, Integer age){ //допиши конструктор
+    public Game(String title, String description, Integer players, Integer price, Integer age) { //допиши конструктор
         super();
-        super.put("name",title);
-        super.put("desc",description);
+        super.put("name", title);
+        super.put("desc", description);
         super.put("players", players.toString());
         super.put("price", price.toString());
-        super.put("age",age.toString());
+        Integer a;
+        switch (age) {
+            case 6:
+                a = R.drawable.age_6;
+                break;
+            case 12:
+                a = R.drawable.age_12;
+                break;
+            case 18:
+                a = R.drawable.age_18;
+                break;
+            default:
+                a = -1;
+
+        }
+        this.age = age;
+
+        super.put("age", a.toString());
 
     }
 
-   public String getName(){
+    public String getName() {
         return super.get("name");
     }
-    public String getDesc(){
+
+    public String getDesc() {
         return super.get("desc");
     }
-    public String getPrice(){
+
+    public String getPrice() {
         return super.get("price");
     }
-    public Integer getPlayers(){
-        return Integer.valueOf(super.get("players"));
+
+    public Integer getPlayers() {
+        String s = super.get("players");
+        return Integer.valueOf(s);
     }
-    public Integer getAge(){
-        return Integer.valueOf(super.get("age"));
+
+    public Integer getAge() {
+
+        return this.age;//Integer.valueOf(super.get("age"));
     }
   /*  public Game() {
 
